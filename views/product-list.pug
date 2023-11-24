@@ -1,0 +1,39 @@
+extends template 
+
+block content   
+  // Content Header (Page header)
+  section.content-header
+    .container-fluid
+      .row.mb-2
+        .col-sm-6
+          h1 Product List
+    // /.container-fluid
+  // Main content
+  section.content
+    // Default box
+    .card
+      .card-header
+        h3.card-title Product List
+        .card-tools
+          .search-box.input-group.input-group-sm(style='width: 150px')
+            input.form-control.float-right(type='text' name='table_search' placeholder='Search')
+            .input-group-append
+              button.btn.btn-default(type='submit')
+                i.fas.fa-search
+      .card-body.p-0
+        table.table.table-hover.text-nowrap.product-list
+          thead
+            tr
+              th ID
+              th Name
+              th Price
+              th
+          tbody
+            each item in products 
+              tr 
+                td=item._id 
+                td=item.name 
+                td=item.price.toFixed(2)
+                td 
+                  a.btn.btn-primary.btn-sm(href=`/products/${item._id}`)
+                      li.fas.fa-eye View     

@@ -1,0 +1,73 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title LetDiv - H&#x1ECD;c L&#x1EAD;p Tr&igrave;nh &Dstrok;&#x1EA3;m B&#x1EA3;o
+  // Google Font: Source Sans Pro
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')
+  // Font Awesome
+  link(rel='stylesheet' href='/lte/plugins/fontawesome-free/css/all.min.css')
+  // Theme style
+  link(rel='stylesheet' href='/lte/dist/css/adminlte.min.css')
+// Site wrapper
+.wrapper
+  // Navbar
+  nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+    // Left navbar links
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link(data-widget='pushmenu' href='#' role='button')
+          i.fas.fa-bars
+  // /.navbar
+  // Main Sidebar Container
+  aside.main-sidebar.sidebar-dark-primary.elevation-4
+    // Brand Logo
+    a.brand-link(href='https://letdiv.com')
+      img.brand-image.img-circle.elevation-3(src='/lte/img/logo.png' alt='LetDiv Logo' style='opacity: 0.8')
+      span.brand-text.font-weight-light Trung T&acirc;m LetDiv
+    // Sidebar
+    .sidebar
+      // Sidebar user (optional)
+      .user-panel.mt-3.pb-3.mb-3.d-flex
+        .image
+          img.img-circle.elevation-2(src='/lte/dist/img/user2-160x160.jpg' alt='User Image')
+        .info
+          a.d-block(href='#') User 01
+      // Sidebar Menu
+      nav.mt-2
+        ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview' role='menu' data-accordion='false')
+          //
+            Add icons to the links using the .nav-icon class
+            with font-awesome or any other icon font library
+          li.nav-item
+            a.nav-link(href='/')
+              i.fas.fa-home.nav-icon
+              p Home
+      // /.sidebar-menu
+    // /.sidebar
+  // Your code here
+  .content-wrapper
+    block content 
+  // /Your code here
+  footer.main-footer
+    .float-right.d-none.d-sm-block
+      b Version
+      |  3.2.0
+    strong
+      | Copyright &copy; 2014-2023
+      a(href='https://letdiv.com') letdiv.com
+      | .
+    |         All rights reserved.
+  // Control Sidebar
+  aside.control-sidebar.control-sidebar-dark
+    // Control sidebar content goes here
+  // /.control-sidebar
+// ./wrapper
+// jQuery
+script(src='/lte/plugins/jquery/jquery.min.js')
+// Bootstrap 4
+script(src='/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')
+// AdminLTE App
+script(src='/lte/dist/js/adminlte.min.js')
+// AdminLTE for demo purposes
+script(src='/lte/dist/js/demo.js')
+block scripts

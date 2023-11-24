@@ -1,0 +1,33 @@
+extends template 
+
+block content 
+  // Content Header (Page header)
+  section.content-header
+    .container-fluid
+      .row.mb-2
+        .col-sm-6
+          h1 Product Detail
+    // /.container-fluid
+  // Main content
+  section.content
+    // Default box
+    .card.card-solid
+      .card-body
+        .row
+          .col-12.col-sm-6
+            .col-12
+              img.product-image(src=`${product.image}` alt='Product Image')
+          .col-12.col-sm-6
+            h3.my-3.product-name=product.price
+            hr
+            .bg-gray.py-2.px-3.mt-4
+              h2.mb-0.product-price=product.price
+        .row.mt-4
+          nav.w-100
+            #product-tab.nav.nav-tabs(role='tablist')
+              a#product-desc-tab.nav-item.nav-link.active(data-toggle='tab' href='#product-desc' role='tab' aria-controls='product-desc' aria-selected='true') Description
+          #nav-tabContent.tab-content.p-3
+            #product-desc.tab-pane.fade.show.active.product-description(role='tabpanel' aria-labelledby='product-desc-tab')=product.description
+      // /.card-body
+    // /.card
+  // /.content
