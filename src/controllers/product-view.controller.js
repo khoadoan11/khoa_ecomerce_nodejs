@@ -17,6 +17,7 @@ exports.getProducts = catching ( async (req, res, next) =>{
         });
 });
 
+
 exports.getProduct = catching ( async (req, res, next) =>{
     const {id} = req.params;
     const product = await Product.findById(id);
